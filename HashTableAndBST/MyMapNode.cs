@@ -59,7 +59,7 @@ namespace HashTableAndBST
             }
             Console.WriteLine(count);
         }
-            public void Remove(K key)
+            public void Remove(K key,string word)
             {
                 int position = GetArrayPosition(key);
                 LinkedList<KeyValue<K, V>> linkedlist = GetLinkedList(position);
@@ -67,7 +67,7 @@ namespace HashTableAndBST
                 KeyValue<K, V> founditem = default(KeyValue<K, V>);
                 foreach (KeyValue<K, V> item in linkedlist)
                 {
-                    if (item.Key.Equals(key))
+                    if (item.Value.Equals(word))
                     {
                         itemfound = true;
                         founditem = item;
@@ -76,6 +76,7 @@ namespace HashTableAndBST
                 if (itemfound)
                 {
                     linkedlist.Remove(founditem);
+                Console.WriteLine("Sucessfully Removed !");
                 }
             }
             protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)

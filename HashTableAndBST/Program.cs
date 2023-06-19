@@ -30,7 +30,8 @@ namespace DataStruct
             myMapNode.Add("0", "paranoid");
             myMapNode.Add("0", "avoidable");
             myMapNode.Add("0", "situations");
-            myMapNode.FindFrequency("0", "paranoid");
+            // myMapNode.FindFrequency("0", "paranoid");
+            myMapNode.Remove("0", "avoidable");
         }
     }
 }
