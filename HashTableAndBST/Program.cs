@@ -24,7 +24,8 @@ namespace DataStruct
             binarySearchTree.Insert(63);
             binarySearchTree.Insert(67);
             binarySearchTree.Display();
-
+            bool result = binarySearchTree.IfExits(63, binarySearchTree);
+            Console.WriteLine(result);
 
         }
     }
