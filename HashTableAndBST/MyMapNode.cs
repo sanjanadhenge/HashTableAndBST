@@ -41,7 +41,24 @@ namespace HashTableAndBST
                 KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
                 linkedlist.AddLast(item);
             }
+           public void FindFrequency(K key,string word)
+           {
+            int count = 0;
+            int position = GetArrayPosition(key);
+            LinkedList<KeyValue<K, V>> linkedlist = GetLinkedList(position);
+            bool itemfound = false;
            
+            foreach (KeyValue<K, V> item in linkedlist)
+            {
+                if (item.Value.Equals(word))
+                {
+                    itemfound = true;
+                    count++;
+                }
+               
+            }
+            Console.WriteLine(count);
+        }
             public void Remove(K key)
             {
                 int position = GetArrayPosition(key);

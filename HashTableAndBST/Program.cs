@@ -16,12 +16,13 @@ namespace DataStruct
             myMapNode.Add("1", "be");
             myMapNode.Add("2", "or");
             myMapNode.Add("3", "not");
-            myMapNode.Add("4", "to");
+            myMapNode.Add("0", "to");
             myMapNode.Add("5", "be");
             string hash5 = myMapNode.Get("5");
             Console.WriteLine("5th hash value" + hash5);
             string hash2 = myMapNode.Get("2");
             Console.WriteLine("2nd hash value" + hash2);
+            myMapNode.FindFrequency("0", "to");
         }
     }
 }
